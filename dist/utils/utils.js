@@ -1,9 +1,10 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 exports.getHash = exports.getNowDate = void 0;
-const sha3_1 = require("sha3");
-const getNowDate = (date, time) => `${date.getFullYear()}-${('0' + (date.getMonth() + 1)).slice(-2)}-${('0' + date.getDate()).slice(-2)}${time ? ' ' + date.toLocaleTimeString() : ''}`;
+var sha3_1 = require("sha3");
+var getNowDate = function (date, time) {
+    return "".concat(date.getFullYear(), "-").concat(('0' + (date.getMonth() + 1)).slice(-2), "-").concat(('0' + date.getDate()).slice(-2)).concat(time ? ' ' + date.toLocaleTimeString() : '');
+};
 exports.getNowDate = getNowDate;
-const getHash = (a, size) => new sha3_1.SHA3(size).update(a).digest('hex');
+var getHash = function (a, size) { return new sha3_1.SHA3(size).update(a).digest('hex'); };
 exports.getHash = getHash;
-//# sourceMappingURL=Utils.js.map
